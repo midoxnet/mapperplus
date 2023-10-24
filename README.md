@@ -6,7 +6,7 @@
 - MapperPlus utilizes a Chrome Headless browser to intercept every request and response, ensuring the download of JavaScript files goes beyond heuristic scans or regular expressions, and includes the handling of all requested JS files.
 - MapperPlus is based on an already existing tool called SourceMapper which helps you extract the source code from a single .map file.
 
-# Some ideas to help you include MapperPlus in your recon automation pipeline:
+# Consider these suggestions for integrating MapperPlus into your reconnaissance automation pipeline:
 MapperPlus could be used with httpx , jsluice or Trufflehog and more. 
 (https://github.com/BishopFox/jsluice/ , https://github.com/projectdiscovery/httpx , https://github.com/trufflesecurity/trufflehog )
 1. You can use httpx to retrieve live webservers and then use its output as an input of MapperPlus.
@@ -34,16 +34,16 @@ MapperPlus requires :
 # How to use: 
 
 MapperPlus have some features and accepts some arguments: 
- 1. In order to download all .map files for a single website, use -u with the URL of your target and -t with the output directory where the JS files will be written. ( -u and -t are required.)
+ 1. To download all .map files for a specific website, utilize the `-u` option with the URL of your target, and the `-t` option with the destination directory where the JS files will be saved. ( `-u` and `-t` are required.)
     ``` python3 mapperplus.py -u https://www.example.com/ -t  ```
     
-MapperPlus also accepts cookies and custom headers with -c to include a cookie file and -h to include a custom header.
+MapperPlus also offers the option to include cookies and custom headers if needed. You can use `-c` to specify a cookie file and `-h` to provide custom headers.
 
-**Example :** ```python3 mapperplus.py -u https://www.example.com/ -t example_output_directory -c cookiefile.txt -h "Authorization: Basic YWRtaW46YWRtaW4="```
+**Example 1:** ```python3 mapperplus.py -u https://www.example.com/ -t example_output_directory -c cookiefile.txt -h "Authorization: Basic YWRtaW46YWRtaW4="```
 
- 2. In order to download and extract source codes of multiple targets at once, you can use the -r with the list of your targets.
+ 2. In order to download and extract source codes of multiple targets at once, you can use the `-r` with the list of your targets.
 
-**Example :** ```python3 mapperplus.py -r targets.txt -t example_output_directory -c cookiefile.txt -h "Authorization: Basic YWRtaW46YWRtaW4="```
+**Example 2:** ```python3 mapperplus.py -r targets.txt -t example_output_directory -c cookiefile.txt -h "Authorization: Basic YWRtaW46YWRtaW4="```
 
 # Some under construction features:
 1. Download Lazy loaded .js files/chunks and look for their .map files too. (This will uncover the hidden parts of a number of websites) - **Security By Obscurity**.
