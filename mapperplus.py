@@ -5,7 +5,7 @@ import subprocess
 from termcolor import colored
 
 def main():
-    parser = argparse.ArgumentParser(description="A main script to process various actions on URLs.")
+    parser = argparse.ArgumentParser(description="MapperPlus to download and extract all JS files from a given target or targets")
     
     # URL or file containing URLs argument
     group = parser.add_mutually_exclusive_group(required=True)
@@ -60,11 +60,6 @@ def main():
     print(colored(f"Processing maps for target: {args.target}", "magenta"))
     cmd = ['python3', 'process_all_maps.py', '--target-name', args.target]
     subprocess.run(cmd)
-    # Constructing and executing the command to extract endpoints for each host
-#    print(colored(f"Getting endpoints for target: {args.target}", "magenta"))
-#    cmd_endpoints = ['python3', 'endpoints.py', '-target', args.target]
-    
-#    subprocess.run(cmd_endpoints)
     
     print(colored("All operations completed successfully!", "green"))
 
