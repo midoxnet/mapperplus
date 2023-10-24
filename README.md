@@ -2,9 +2,9 @@
 
 ![cover](https://github.com/midoxnet/mapperplus/assets/27289397/b8fabf60-6737-4739-865e-663693ed6960)
 
-**MapperPlus is based on an already existing tool called SourceMapper which helps you extract the source code from a single .map file.**
 - MapperPlus facilitates the validation and retrieval of all .js/.js.map files from a specified target or a list of targets. It subsequently employs SourceMapper to extract source code for all your designated targets.
 - MapperPlus utilizes a Chrome Headless browser to intercept every request and response, ensuring the download of JavaScript files goes beyond heuristic scans or regular expressions, and includes the handling of all requested JS files.
+- MapperPlus is based on an already existing tool called SourceMapper which helps you extract the source code from a single .map file.
 
 # Some ideas to help you include MapperPlus in your recon automation pipeline:
 MapperPlus could be used with httpx , jsluice or Trufflehog and more. 
