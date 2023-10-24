@@ -38,3 +38,7 @@ The script also accepts cookies and custom headers with -c to include a cookie f
 
 **Example :** ```python3 mapperplus.py -r targets.txt -t example_output_directory -c cookiefile.txt -h "Authorization: Basic YWRtaW46YWRtaW4="```
 
+# Some under construction features:
+1. Download Lazy loaded .js files/chunks and look for their .map files too.
+2. Handle some edge cases,  When extracting multiple .js files from various sources, certain websites may necessitate custom cookies to prevent encountering 4xx errors.
+**You can add more ideas or contact me on my X profile to share your ideas or needs:** https://twitter.com/silentgh00st 
