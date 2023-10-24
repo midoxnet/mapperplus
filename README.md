@@ -29,7 +29,7 @@ MapperPlus requires :
 
 1. Run the requirements.sh script in order to download the latest version of required node modules.
 2. Make sure Chrome is installed in your machine: **Run this command to verify** ```google-chrome --version```
-3. Make sure you have npm, Node and sourcemapper installed.
+3. Make sure you have npm, Node.js and Sourcemapper installed.
 
 # How to use: 
 
@@ -46,8 +46,8 @@ MapperPlus also accepts cookies and custom headers with -c to include a cookie f
 **Example :** ```python3 mapperplus.py -r targets.txt -t example_output_directory -c cookiefile.txt -h "Authorization: Basic YWRtaW46YWRtaW4="```
 
 # Some under construction features:
-1. Download Lazy loaded .js files/chunks and look for their .map files too.
-2. Handle some edge cases,  When extracting multiple .js files from various sources, certain websites may necessitate custom cookies to prevent encountering 4xx errors.
+1. Download Lazy loaded .js files/chunks and look for their .map files too. (This will uncover the hidden parts of a number of websites) - **Security By Obscurity**.
+2. Address specific scenarios: When retrieving multiple .js files from multiple sources, some websites may require specific cookies to avoid encountering 4xx errors.
 
 
 **You can add more ideas or contact me on my X profile to share your ideas or needs:** https://twitter.com/silentgh00st 
