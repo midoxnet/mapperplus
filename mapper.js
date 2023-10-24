@@ -10,7 +10,7 @@ puppeteer.use(StealthPlugin());
 
 function displayHelp() {
     console.log(`
-Usage: node script-name.js [OPTIONS]
+Usage: node mapper.js [OPTIONS]
     
 Options:
   --url           The URL to scrape.
@@ -19,8 +19,8 @@ Options:
   --header        Additional headers (e.g., "User-Agent: Mozilla").
 
 Examples:
-  node script-name.js --url=https://example.com --cookie-file=./cookie.txt --target=./downloads
-  node script-name.js --url=https://example.com --header="Authorization: Bearer token"
+  node mapper.js --url=https://example.com --cookie-file=./cookie.txt --target=./downloads
+  node mapper.js --url=https://example.com --header="Authorization: Bearer token"
     `);
     process.exit(0);
 }
@@ -97,6 +97,7 @@ const downloadFile = async (url, outputPath, cookies = "") => {
 
 const scrapeAndDownloadJSFiles = async (url, cookieFilePath = null) => {
     const browser = await puppeteer.launch({
+        executablePath: '/usr/bin/google-chrome',
         headless: true,
         ignoreHTTPSErrors: true,
         args: ['--no-sandbox', '--disable-setuid-sandbox']
