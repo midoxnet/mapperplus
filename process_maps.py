@@ -10,7 +10,7 @@ def execute_sourcemapper(directory, output_name):
 
     # For each .js.map file, execute the ./sourcemapper command
     for map_file in map_files:
-        cmd = ['./sourcemapper', '-output', output_name, '-url', map_file]
+        cmd = ['sourcemapper', '-output', output_name, '-url', map_file]
         subprocess.run(cmd)
 
 if __name__ == "__main__":
