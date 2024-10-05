@@ -1,7 +1,7 @@
 const axios = require('axios');
 const process = require('process');
 
-// Function to fetch JavaScript content from a URL - TBD: add custome header or cookies..
+// Function to fetch JavaScript content from a URL - TBD: add custom header or cookies..
 async function fetchJavaScript(url) {
     try {
         const response = await axios.get(url);
