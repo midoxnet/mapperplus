@@ -1,6 +1,9 @@
 import argparse
 import subprocess
 import os
+from pathlib import Path
+
+TOOLS_PATH=Path(__file__).resolve().parent
 
 def main():
     # Setting up argument parsing
@@ -30,7 +33,7 @@ def main():
         if not os.path.exists(sub_directory):
             os.makedirs(sub_directory)
 
-        cmd = f"node mapper.js --url={url} --target={sub_directory}"
+        cmd = f"node {TOOLS_PATH}/mapper.js --url={url} --target={sub_directory}"
         subprocess.run(cmd, shell=True)
 
     print("All URLs processed!")

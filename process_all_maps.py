@@ -1,6 +1,9 @@
 import argparse
 import subprocess
 import os
+from pathlib import Path
+
+TOOLS_PATH=Path(__file__).resolve().parent
 
 def get_map_dirs(target_directory):
     # Search for .map files only within the target_directory and its subdirectories
@@ -12,7 +15,7 @@ def get_map_dirs(target_directory):
 def process_map_dirs(target_directory):
     dirs = get_map_dirs(target_directory)
     for dir in dirs:
-        cmd = ['python3', 'process_maps.py', dir, dir]
+        cmd = ['python3', TOOLS_PATH + 'process_maps.py', dir, dir]
         subprocess.run(cmd)
 
 if __name__ == '__main__':
